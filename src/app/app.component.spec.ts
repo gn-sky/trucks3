@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { FeatureTruckGridModule } from './feature-truck-grid/feature-truck-grid.module';
+import { AppRoutingModule } from './app-routing.module';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [ FeatureTruckGridModule ],
+    imports: [ AppRoutingModule ],
     declarations: [AppComponent]
   }));
 
