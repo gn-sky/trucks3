@@ -1,6 +1,11 @@
+<!-- TruckGridComp user3 {{ user$ | async | json }} -->
+<!-- TruckGridComp user3 {{ this.user4 | json }} -->
+<!-- <div *ngIf="user | async">Auth</div> -->
+<div *ngIf="user4">Auth</div>
+<!-- <div>Auth</div> -->
 <ag-grid-angular
   class="ag-theme-alpine"
-  style="height: 500px; width: 500px"
+  style="height: 750px; width: 750px"
   [rowData]="rowData"
   [columnDefs]="colDefs"
 ></ag-grid-angular>
