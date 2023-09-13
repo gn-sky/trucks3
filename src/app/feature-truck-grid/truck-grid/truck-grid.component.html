@@ -1,6 +1,9 @@
-<ag-grid-angular
-  class="ag-theme-alpine"
-  style="height: 500px; width: 500px"
-  [rowData]="rowData"
-  [columnDefs]="colDefs"
-></ag-grid-angular>
+<div *ngIf="{ user: user$ | async } as data">
+  <ag-grid-angular
+    class="ag-theme-alpine"
+    [class.admin]="data.user"
+    [class.regular]="!data.user"
+    [rowData]="rowData"
+    [columnDefs]="colDefs"
+  ></ag-grid-angular>
+</div>

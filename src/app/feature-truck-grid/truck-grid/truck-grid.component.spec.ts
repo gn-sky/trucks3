@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TruckGridComponent } from './truck-grid.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
 
 describe('TruckGridComponent', () => {
   let component: TruckGridComponent;
@@ -9,7 +11,10 @@ describe('TruckGridComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ AgGridModule ],
+      imports: [
+        AgGridModule,
+        AngularFireModule.initializeApp(environment.firebase),
+      ],
       declarations: [TruckGridComponent]
     });
     fixture = TestBed.createComponent(TruckGridComponent);
