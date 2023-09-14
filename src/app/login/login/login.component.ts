@@ -15,7 +15,7 @@ export class LoginComponent {
   
   successCallback(data: FirebaseUISignInSuccessWithAuthResult) {
     this.authService.login(data);
-    this.router.navigate(['/truck-grid']);
+    this.router.navigateByUrl('truck-grid');
   }
 
   errorCallback(data: FirebaseUISignInFailure) {
