@@ -1,2 +1,4 @@
-<p>login works!</p>
-<firebase-ui></firebase-ui>
+<firebase-ui
+  (signInSuccessWithAuthResult)="successCallback($event)"
+  (signInFailure)="errorCallback($event)"
+></firebase-ui>
