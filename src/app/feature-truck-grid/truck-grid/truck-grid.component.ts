@@ -15,21 +15,27 @@ export class TruckGridComponent {
     { make: 'Ford', model: 'Modeo', price: 32000, action: 'delete' },
     { make: 'Tesla', model: 'S', price: 91000, action: 'delete' }
   ];
-  colDefs: ColDef[] = [
-    { field: 'make' },
-    { field: 'model' },
-    { field: 'price' },
-    { field: 'action', hide: true }
-  ];
+  colDefs: ColDef[] = [];
 
   user$ = this.authService.user$.pipe(
     tap((user: any) => {
-      const actionColumn = this.colDefs.find(c => c.field === 'action');
-      if (actionColumn) {
-        actionColumn.hide = !user;
-      }
+      this.colDefs = this.getColumns(user);
     })
   );
 
   constructor(private authService: AuthService) { }
+
+  private getAnonymousUserColumns = (): ColDef[] => [
+    { field: 'make' },
+    { field: 'model' },
+    { field: 'price' }
+  ];
+
+  private getColumns = (user: any): ColDef[] => {
+    let columns: ColDef[] = this.getAnonymousUserColumns();
+    if (user) {
+      columns.push({ field: 'action' });
+    }
+    return columns;
+  };
 }
