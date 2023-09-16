@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
 import { TruckRow } from './model/truck-row';
-import { AuthService } from '../../auth/auth.service';
+import { AuthService } from '../../shared/auth.service';
 import { tap } from 'rxjs';
 
 @Component({
