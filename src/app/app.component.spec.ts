@@ -3,12 +3,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+import { ToolbarModule } from './toolbar/toolbar.module';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
       AppRoutingModule,
       AngularFireModule.initializeApp(environment.firebase),
+      ToolbarModule
     ],
     declarations: [AppComponent]
   }));
