@@ -10,13 +10,4 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Trucks';
 
-  constructor(
-    private readonly authService: AuthService,
-    private readonly router: Router
-  ) { }
-
-  logout() {
-    this.authService.logout();
-    this.router.navigateByUrl('truck-grid');
-  }
 }
