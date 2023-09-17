@@ -10,6 +10,8 @@ import { AuthService } from '../../shared/auth.service';
 export class ToolbarComponent {
   @Input() title = '';
 
+  user$ = this.authService.user$;
+
   constructor(
     private authService: AuthService,
     private router: Router
