@@ -12,7 +12,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     CommonModule
   ],
   exports: [
-    ToolbarComponent    
+    ToolbarComponent
   ]
 })
 export class ToolbarModule { }

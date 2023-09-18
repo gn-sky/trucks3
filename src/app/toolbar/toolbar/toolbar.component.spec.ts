@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolbarComponent } from './toolbar.component';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 import { AuthService } from '../../services/auth.service';
 import { MockAuthService } from './mock-auth.service';
