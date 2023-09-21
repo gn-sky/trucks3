@@ -1,5 +1,13 @@
-<h1>{{ title }}</h1>
-<button *ngIf="user$ | async; else anonymous" (click)="logout()">Logout</button>
-<ng-template #anonymous>
-  <button (click)="login()">Login</button>
-</ng-template>
+<section>
+  <div>
+    <h1>{{ title }}</h1>
+  </div>
+  <div>
+    <button *ngIf="user$ | async; else anonymous" (click)="logout()">
+      Logout
+    </button>
+    <ng-template #anonymous>
+      <button (click)="login()">Login</button>
+    </ng-template>
+  </div>
+</section>
