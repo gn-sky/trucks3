@@ -9,3 +9,8 @@ $height: 500px;
     height: $height;
     width: 600px;
 }
+
+div {
+    display: flex;
+    justify-content: center;
+}
