@@ -1,4 +1,17 @@
 mat-toolbar {
     display: flex;
-    justify-content: space-between;
+}
+
+.element {
+    flex: 1;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.auth {
+    display: flex;
+    justify-content: flex-end;
 }

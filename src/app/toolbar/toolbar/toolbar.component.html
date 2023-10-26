@@ -1,8 +1,9 @@
 <mat-toolbar color="primary">
-  <div>
+  <div class="element"></div>
+  <div class="element title">
     <h1>{{ title }}</h1>
   </div>
-  <div>
+  <div class="element auth">
     <button *ngIf="user$ | async; else anonymous" (click)="logout()">
       Logout
     </button>
